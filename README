@@ -3,12 +3,17 @@ Twitter timeline logger for ttytter
 
 download and unpack twitter archive
 run cleanup.sh from unpacked directory
-patch ttytter to use JSON library (needs to be installed):
-patch ttytter.pl ttytter_json_lib_decode.patch
-start ttytter with extension:
-ttytter.pl -ssl -dostream -exts=ttytter_logger.pl -extpref_logger_dest=/path/to/twitter_archive
+patch oysttyer to use JSON library (needs to be installed):
+# or use decode-json branch of github.com/alech/oysttyer
+patch oysttyer.pl oysttyer_json_lib_decode.patch
+start oysttyer with extension:
+ttytter.pl -ssl -dostream -exts=oysttyer_logger.pl -extpref_logger_dest=/path/to/twitter_archive
 ...
 load /path/to/twitter_archive/index.html in browser
+[...]
 PROFIT :)
 
 Can be used with -notimeline and -track to create an archive of a search, too.
+
+TODO: split archive into daily files in order to make loading of archives
+not take in the order of minutes ...
